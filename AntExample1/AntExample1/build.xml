@@ -1,6 +1,7 @@
 <?xml version="1.0" ?> 
 <project name="RegistrationPage" default="war">
 
+
 	<path id="compile.classpath">
 		<fileset dir="WebContent/WEB-INF/lib">
 			<include name="*.jar"/>
@@ -13,8 +14,10 @@
 	</target>
 	
 	<target name="compile" depends="init" >
-		<javac destdir="build/classes" debug="true" srcdir="src">
-			<classpath refid="compile.classpath"/>
+		<javac destdir="build/classes" debug="true" srcdir="src" compiler="javac1.7">
+		 <classpath refid="compile.classpath"/>
+			
+			
 		</javac>
 	</target>
 	
